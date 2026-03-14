@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Guide: The Number That Actually Matters in Window Tinting | ClearGuard Solutions</title>
+  <meta name="description" content="Download the free homeowner's guide to window film performance. Discover why TSER — not UV rejection — is the only number that tells you how much heat a film actually blocks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0F2A4A;
+      --navy-light: #1a3a5c;
+      --gold: #C8A96E;
+      --gold-light: #d4b87a;
+      --white: #ffffff;
+      --off-white: #f8f6f2;
+      --text-dark: #1a1a2e;
+      --text-muted: #6b7280;
+      --green: #25D366;
+      --red: #ef4444;
+      --border: #e5e7eb;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--off-white); color: var(--text-dark); line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    /* NAV */
+    nav { background: var(--navy); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; text-decoration: none; }
+    nav .nav-link { color: rgba(255,255,255,0.8); font-size: 0.85rem; text-decoration: none; }
+    nav .nav-link:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #0d3a6e 100%); padding: 80px 24px 60px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 60% 40%, rgba(200,169,110,0.08) 0%, transparent 60%); pointer-events: none; }
+    .hero-badge { display: inline-block; background: rgba(200,169,110,0.15); border: 1px solid rgba(200,169,110,0.4); color: var(--gold); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; }
+    .hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; max-width: 800px; margin: 0 auto 20px; }
+    .hero h1 span { color: var(--gold); }
+    .hero p { color: rgba(255,255,255,0.8); font-size: 1.1rem; max-width: 600px; margin: 0 auto 40px; }
+    .hero-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .stat-label { color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-top: 4px; }
+
+    /* FORM CARD */
+    .form-card { background: var(--white); border-radius: 16px; padding: 40px; max-width: 480px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    .form-card h2 { font-size: 1.4rem; color: var(--navy); margin-bottom: 8px; }
+    .form-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .form-group input { width: 100%; padding: 12px 16px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.95rem; font-family: 'Inter', sans-serif; transition: border-color 0.2s; outline: none; }
+    .form-group input:focus { border-color: var(--navy); }
+    .form-group input.error { border-color: var(--red); }
+    .phone-row { display: flex; gap: 8px; }
+    .phone-row input { flex: 1; }
+    .btn-otp { background: var(--navy); color: var(--white); border: none; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .btn-otp:hover { background: var(--navy-light); }
+    .btn-otp:disabled { background: #9ca3af; cursor: not-allowed; }
+    .otp-row { display: flex; gap: 8px; margin-top: 8px; }
+    .otp-row input { flex: 1; text-align: center; font-size: 1.2rem; letter-spacing: 0.3em; font-weight: 700; }
+    .btn-verify { background: var(--gold); color: var(--navy); border: none; padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .btn-verify:hover { background: var(--gold-light); }
+    .verified-badge { display: none; align-items: center; gap: 6px; color: #16a34a; font-size: 0.85rem; font-weight: 600; margin-top: 8px; }
+    .verified-badge.show { display: flex; }
+    .error-msg { color: var(--red); font-size: 0.8rem; margin-top: 4px; display: none; }
+    .error-msg.show { display: block; }
+    .info-msg { color: #2563eb; font-size: 0.8rem; margin-top: 4px; display: none; }
+    .info-msg.show { display: block; }
+    .btn-download { width: 100%; background: var(--gold); color: var(--navy); border: none; padding: 16px; border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: all 0.2s; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-download:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(200,169,110,0.4); }
+    .btn-download:disabled { background: #d1d5db; color: #9ca3af; cursor: not-allowed; transform: none; box-shadow: none; }
+    .privacy-note { text-align: center; color: var(--text-muted); font-size: 0.75rem; margin-top: 12px; }
+
+    /* SUCCESS STATE */
+    .success-state { display: none; text-align: center; padding: 20px 0; }
+    .success-state.show { display: block; }
+    .success-icon { width: 64px; height: 64px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 2rem; }
+    .success-state h3 { color: var(--navy); font-size: 1.3rem; margin-bottom: 8px; }
+    .success-state p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .btn-download-direct { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--navy); text-decoration: none; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 0.95rem; transition: all 0.2s; }
+    .btn-download-direct:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* WHAT'S INSIDE */
+    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--navy); text-align: center; margin-bottom: 12px; }
+    .section-sub { text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 48px; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .feature-card { background: var(--white); border-radius: 12px; padding: 28px; border-left: 4px solid var(--gold); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .feature-icon { font-size: 2rem; margin-bottom: 12px; }
+    .feature-card h3 { color: var(--navy); font-size: 1rem; margin-bottom: 8px; }
+    .feature-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* COMPARISON TABLE */
+    .table-section { background: var(--navy); padding: 80px 24px; }
+    .table-inner { max-width: 900px; margin: 0 auto; }
+    .table-inner .section-title { color: var(--white); }
+    .table-inner .section-sub { color: rgba(255,255,255,0.7); }
+    .comparison-table { width: 100%; border-collapse: collapse; margin-top: 32px; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .comparison-table th { background: var(--navy-light); color: var(--gold); padding: 14px 20px; text-align: left; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+    .comparison-table td { padding: 12px 20px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table tr:nth-child(even) td { background: #f9fafb; }
+    .tser-col { font-weight: 700; color: #16a34a; }
+    .uv-col { color: #dc2626; }
+    .badge-high { display: inline-block; background: #dcfce7; color: #16a34a; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+    .badge-mislead { display: inline-block; background: #fee2e2; color: #dc2626; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+
+    /* BLOG SECTION */
+    .blog-section { padding: 80px 24px; max-width: 800px; margin: 0 auto; }
+    .blog-section h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 8px; }
+    .blog-meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 2px solid var(--gold); }
+    .blog-body h3 { font-size: 1.3rem; color: var(--navy); margin: 32px 0 12px; }
+    .blog-body p { color: #374151; margin-bottom: 16px; line-height: 1.8; }
+    .blog-body blockquote { border-left: 4px solid var(--gold); padding: 16px 20px; background: rgba(200,169,110,0.08); border-radius: 0 8px 8px 0; margin: 24px 0; }
+    .blog-body blockquote p { margin: 0; font-style: italic; color: var(--navy); font-weight: 500; }
+    .highlight-box { background: var(--navy); color: var(--white); padding: 24px; border-radius: 12px; margin: 32px 0; }
+    .highlight-box h4 { color: var(--gold); font-size: 1rem; margin-bottom: 8px; }
+    .highlight-box p { color: rgba(255,255,255,0.85); margin: 0; }
+    .spectrum-bar { margin: 24px 0; }
+    .spectrum-label { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .bar-row { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin-bottom: 6px; }
+    .bar-uv { background: #7c3aed; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: 700; }
+    .bar-vis { background: #f59e0b; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: 700; }
+    .bar-ir { background: #ef4444; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: 700; }
+    .bar-legend { display: flex; gap: 16px; font-size: 0.75rem; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+
+    /* CTA BOTTOM */
+    .cta-bottom { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 80px 24px; text-align: center; }
+    .cta-bottom h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 16px; }
+    .cta-bottom p { color: rgba(255,255,255,0.8); max-width: 500px; margin: 0 auto 32px; }
+    .btn-whatsapp { display: inline-flex; align-items: center; gap: 10px; background: var(--green); color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 10px; font-weight: 700; font-size: 1rem; transition: all 0.2s; }
+    .btn-whatsapp:hover { background: #1ebe5a; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: #0a1f38; padding: 32px 24px; text-align: center; }
+    footer p { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* SPINNER */
+    .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 600px) {
+      .hero-stats { gap: 24px; }
+      .form-card { padding: 28px 20px; }
+      .phone-row { flex-direction: column; }
+      .btn-otp { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://www.clearguard-solutions.co.za" class="logo"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663238747092/tkbOvTnUTBFJeqjN.png" alt="ClearGuard Solutions" style="height:52px; width:auto; display:block; background:#fff; border-radius:8px; padding:4px 10px;"></a>
+  <a href="https://www.clearguard-solutions.co.za" class="nav-link">← Back to Website</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Free Homeowner's Guide</div>
+  <h1>The Number That <span>Actually Tells You</span><br/>How Much Heat Your Film Blocks</h1>
+  <p>Every tint company quotes UV rejection. But UV is only 3% of the sun's heat. Download the free guide and learn the one figure that changes everything.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">3%</div>
+      <div class="stat-label">UV's share of solar heat</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">53%</div>
+      <div class="stat-label">Heat from infrared (IR)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">TSER</div>
+      <div class="stat-label">The number that matters</div>
+    </div>
+  </div>
+
+  <!-- FORM CARD -->
+  <div class="form-card">
+    <div id="formState">
+      <h2>Download the Free Guide</h2>
+      <p>Enter your details below and your guide downloads instantly — free.</p>
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" placeholder="e.g. John Smith" autocomplete="name" />
+        <div class="error-msg" id="nameError">Please enter your name</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" placeholder="e.g. john@email.com" autocomplete="email" />
+        <div class="error-msg" id="emailError">Please enter a valid email</div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile Number *</label>
+        <input type="tel" id="phone" placeholder="e.g. 0821234567" autocomplete="tel" />
+        <div class="error-msg" id="phoneError">Please enter a valid SA mobile number</div>
+      </div>
+      <button class="btn-download" id="btnDownload" onclick="submitForm()">
+        <span id="btnText">⬇️ Download Free Guide</span>
+      </button>
+      <p class="privacy-note">🔒 Your details are private. No spam, ever. ClearGuard Solutions will only contact you about your window film needs.</p>
+    </div>
+    <div class="success-state" id="successState">
+      <div class="success-icon">✅</div>
+      <h3>Your Guide is Ready!</h3>
+      <p>Thank you, <span id="successName"></span>! Click below to download your free guide. We may follow up with you about your window film needs.</p>
+      <a href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663238747092/iKRYQgEgSppKYKHv.pdf" class="btn-download-direct" download="ClearGuard_TSER_Guide.pdf" target="_blank">
+        ⬇️ Download Your Free Guide (PDF)
+      </a>
+      <p style="margin-top:16px; font-size:0.85rem; color:#6b7280;">Questions? WhatsApp us: <a href="https://wa.me/27710971544" style="color:#0F2A4A; font-weight:600;">071 097 1544</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section">
+  <h2 class="section-title">What's Inside the Free Guide</h2>
+  <p class="section-sub">7 pages of clear, no-jargon information that will change how you evaluate any window film product.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">☀️</div>
+      <h3>The Solar Spectrum Explained</h3>
+      <p>Understand exactly where the sun's heat comes from — and why blocking UV alone barely makes a dent.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Real LLumar Film Data Table</h3>
+      <p>15 architectural films compared side-by-side with TSER, IR rejection, and VLT figures — no marketing fluff.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Film Selection Guide</h3>
+      <p>Choose the right film based on your priority: heat reduction, glare control, privacy, or energy savings.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">❓</div>
+      <h3>5 Questions to Ask Any Installer</h3>
+      <p>Before you sign anything, ask these five questions. If they can't answer them, walk away.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <h3>Why LLumar Leads the Market</h3>
+      <p>See how LLumar's EnerLogic range achieves TSER figures up to 82% — backed by a 10-year warranty.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <h3>The ROI of the Right Film</h3>
+      <p>How the right TSER figure translates to real rand savings on your electricity bill every month.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="table-section">
+  <div class="table-inner">
+    <h2 class="section-title">UV vs TSER: Why It Matters</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.7);">This is why quoting UV rejection misleads homeowners. Look at the actual heat-blocking difference.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Film Type</th>
+          <th>UV Rejection</th>
+          <th>TSER (Total Solar Energy Rejected)</th>
+          <th>Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basic Clear Film</td>
+          <td class="uv-col">99%</td>
+          <td class="tser-col">21%</td>
+          <td><span class="badge-mislead">Misleading</span></td>
+        </tr>
+        <tr>
+          <td>LLumar ATR 35</td>
+          <td class="uv-col">99%</td>
+          <td class="tser-col">55%</td>
+          <td><span class="badge-high">Good</span></td>
+        </tr>
+        <tr>
+          <td>LLumar CTX 35</td>
+          <td class="uv-col">99%</td>
+          <td class="tser-col">62%</td>
+          <td><span class="badge-high">Very Good</span></td>
+        </tr>
+        <tr>
+          <td>LLumar EnerLogic 35</td>
+          <td class="uv-col">99%</td>
+          <td class="tser-col">79%</td>
+          <td><span class="badge-high">Excellent</span></td>
+        </tr>
+        <tr>
+          <td>LLumar EnerLogic 20</td>
+          <td class="uv-col">99%</td>
+          <td class="tser-col">82%</td>
+          <td><span class="badge-high">Best in Class</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.8rem; margin-top:16px; text-align:center;">All films above show 99% UV rejection — yet their actual heat-blocking performance varies by up to 61 percentage points.</p>
+  </div>
+</section>
+
+<!-- BLOG POST -->
+<section class="blog-section">
+  <h2>Stop Being Misled by UV Rejection: The Only Number That Tells You How Hot Your Room Will Get</h2>
+  <div class="blog-meta">By ClearGuard Solutions &nbsp;|&nbsp; LLumar Approved Installer, Helderberg &nbsp;|&nbsp; March 2026</div>
+  <div class="blog-body">
+    <p>Walk into any window tinting company in South Africa and ask about heat rejection. Within seconds, you'll hear it: <em>"Our film blocks 99% of UV rays."</em> It sounds impressive. It's printed on every brochure, quoted in every sales pitch, and repeated in every Google ad. And it is, technically, true.</p>
+    <p>But here's what they're not telling you: <strong>UV radiation accounts for only about 3% of the sun's total heat energy.</strong> Blocking 99% of 3% means you've addressed less than 3% of the problem. Your room will still bake. Your air conditioner will still run all day. Your furniture will still fade. And you'll still be wondering why you spent the money.</p>
+
+    <blockquote>
+      <p>"UV rejection tells you how well a film protects your skin and furnishings from ultraviolet light. It tells you almost nothing about how much heat the film actually blocks."</p>
+    </blockquote>
+
+    <h3>Where Does Solar Heat Actually Come From?</h3>
+    <p>The sun's energy reaches us across three distinct wavelength bands, each contributing differently to the heat you feel in your room:</p>
+    <div class="spectrum-bar">
+      <div class="spectrum-label">Solar Energy Composition</div>
+      <div class="bar-row">
+        <div class="bar-uv" style="width:3%">UV</div>
+        <div class="bar-vis" style="width:44%">Visible Light (44%)</div>
+        <div class="bar-ir" style="width:53%">Infrared / Heat (53%)</div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="legend-dot" style="background:#7c3aed"></span>UV: 3%</span>
+        <span><span class="legend-dot" style="background:#f59e0b"></span>Visible: 44%</span>
+        <span><span class="legend-dot" style="background:#ef4444"></span>Infrared: 53%</span>
+      </div>
+    </div>
+    <p>The infrared (IR) band — the invisible heat radiation — is responsible for over half of the solar heat entering your building. Visible light contributes another 44%. UV? Just 3%. So when a film proudly blocks 99% of UV, it's addressing the smallest slice of the pie.</p>
+
+    <h3>What Is TSER and Why Does It Change Everything?</h3>
+    <p><strong>Total Solar Energy Rejected (TSER)</strong> is the single figure that accounts for all three bands — UV, visible light, and infrared — combined. It tells you what percentage of the sun's total energy a film prevents from entering your space.</p>
+    <div class="highlight-box">
+      <h4>The Simple Rule</h4>
+      <p>A film with a TSER of 79% blocks 79% of all solar heat — UV, visible, and infrared combined. A film with a TSER of 21% blocks only 21%, regardless of what its UV rejection figure says. Always ask for TSER.</p>
+    </div>
+    <p>Consider two films side by side. Both claim 99% UV rejection. Film A has a TSER of 21%. Film B has a TSER of 79%. Film A will leave your room nearly as hot as an untinted window. Film B will make a dramatic, noticeable difference to your comfort and your electricity bill. The UV figure told you nothing useful. The TSER figure told you everything.</p>
+
+    <h3>The IR Rejection Trap</h3>
+    <p>Some companies, aware that UV rejection is losing credibility, have shifted to quoting IR rejection instead. This is better than UV — but it's still not the full picture. IR rejection only measures performance against the infrared band, ignoring visible light, which carries 44% of solar heat. A film can have impressive IR rejection but mediocre TSER if it doesn't also manage visible light transmission effectively.</p>
+    <p>TSER is the only figure that gives you the complete picture across all three energy bands.</p>
+
+    <h3>What TSER Should You Look For?</h3>
+    <p>As a general guide for South African conditions:</p>
+    <p><strong>Below 40% TSER</strong> — Minimal heat reduction. Suitable only for mild climates or where privacy is the primary goal.<br/>
+    <strong>40–60% TSER</strong> — Moderate heat reduction. You'll notice a difference, but your air conditioner will still work hard.<br/>
+    <strong>60–75% TSER</strong> — Good heat reduction. Comfortable improvement in most rooms.<br/>
+    <strong>75%+ TSER</strong> — Excellent performance. This is where you see real energy savings and genuine comfort improvement. LLumar's EnerLogic range achieves up to 82% TSER.</p>
+
+    <h3>The Bottom Line</h3>
+    <p>Before you agree to any window film installation, ask one question: <em>"What is the TSER of this film?"</em> If the installer can't answer immediately, or deflects to UV rejection, that tells you everything you need to know about their expertise.</p>
+    <p>ClearGuard Solutions installs only LLumar-certified films — the only brand in South Africa that publishes full, independently verified TSER data for every product in its range. We believe you deserve to know exactly what you're buying.</p>
+  </div>
+</section>
+
+<!-- CTA BOTTOM -->
+<section class="cta-bottom">
+  <h2>Ready to Choose the Right Film for Your Home?</h2>
+  <p>Get a free, no-obligation quote from ClearGuard Solutions. We'll recommend the right LLumar film based on your specific needs and TSER requirements.</p>
+  <a href="https://wa.me/27710971544?text=Hi%20ClearGuard%2C%20I%20read%20the%20TSER%20guide%20and%20would%20like%20a%20free%20quote" class="btn-whatsapp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp Us for a Free Quote
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 ClearGuard Solutions · LLumar Approved Installer · Helderberg, Western Cape · <a href="https://www.clearguard-solutions.co.za">clearguard-solutions.co.za</a></p>
+  <p style="margin-top:8px;">Tel: <a href="tel:+27710971544">071 097 1544</a> · <a href="mailto:info@clearguard-solutions.co.za">info@clearguard-solutions.co.za</a></p>
+</footer>
+
+<script>
+  // ── State ──────────────────────────────────────────────────────────────────
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function formatSAPhone(raw) {
+    let num = raw.replace(/\D/g, '');
+    if (num.startsWith('0') && num.length === 10) num = '27' + num.slice(1);
+    if (num.startsWith('27') && num.length === 11) return num;
+    return null;
+  }
+
+  function showError(id, show) {
+    document.getElementById(id).classList.toggle('show', show);
+  }
+
+  function showInfo(id, msg) {
+    const el = document.getElementById(id);
+    el.textContent = msg;
+    el.classList.toggle('show', !!msg);
+  }
+
+  // ── Submit & Download ──────────────────────────────────────────────────────
+  async function submitForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+
+    // Validate all fields
+    let valid = true;
+    showError('nameError', !name); if (!name) valid = false;
+    showError('emailError', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)); if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) valid = false;
+    const formatted = formatSAPhone(phone);
+    showError('phoneError', !formatted); if (!formatted) valid = false;
+    if (!valid) return;
+
+    // Disable button to prevent double submit
+    const btn = document.getElementById('btnDownload');
+    btn.disabled = true;
+    document.getElementById('btnText').textContent = 'Preparing your guide...';
+
+    // Save lead to ClearGuard backend (best-effort)
+    try {
+      await fetch('https://www.clearguard-solutions.co.za/api/guide/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, source: 'TSER Guide Landing Page' })
+      });
+    } catch (e) { /* non-fatal */ }
+
+    // Show success state
+    document.getElementById('successName').textContent = name.split(' ')[0];
+    document.getElementById('formState').style.display = 'none';
+    document.getElementById('successState').classList.add('show');
+
+    // Auto-trigger download
+    setTimeout(() => {
+      const a = document.createElement('a');
+      a.href = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663238747092/iKRYQgEgSppKYKHv.pdf';
+      a.download = 'ClearGuard_TSER_Guide.pdf';
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }, 500);
+  }
+
+  // Allow Enter key on form fields
+  document.addEventListener('DOMContentLoaded', () => {
+    ['name','email','phone'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => {
+        if (e.key === 'Enter') submitForm();
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
